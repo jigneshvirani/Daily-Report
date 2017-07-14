@@ -11,6 +11,16 @@
 |
 */
 
+// Route::get('/', function () {
+    
+// });
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('home');
 });
+
+ Route::resource('home', 'CreatetaskController');
+ Route::post('allsummary', 'CreatetaskController@allsummary');
+ Route::get('create','CreatetaskController@createentry');
